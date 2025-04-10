@@ -2,7 +2,7 @@
 # Fecha: Marzo de 2025
 # Descripción: Primera version pygame dfdfdughuuh
 # versión 02
-# se agrego la clase configuracion en el modulo configurations.py que
+# Se agregó la clase configuración en el módulo configurations.py que
 # va a iniciar
 
 from turtle import Screen
@@ -13,6 +13,7 @@ from typing import Tuple
 import pygame
 from  Configurations import Configurations
 from Game_funtionalities import game_event,screen_refresh
+from Snake import SnakeBlock
 def run_game()->None:
     """
     Función principa
@@ -24,17 +25,19 @@ def run_game()->None:
     #Se inicializa la pantalla
 
     screen=pygame.display.set_mode(Configurations.get_screen_size())
-
+    #se configura el titulo del juego
     pygame.display.set_caption(Configurations.get_game_title())
 
-    #Ciclo principal del juego
+    #se crea el bloque inicial de la serpiente(cabeza)
+    snake_head = SnakeBlock()
 
+    #Ciclo principal del juego
     game_over=False
 
     while not game_over:
         game_over=game_event()
         #Se dibuja los elementos gráficos em la pantalla
-        screen_refresh(screen)
+        screen_refresh(screen,snake_head)
     #Se cierran los recursos del juego
     pygame.quit()
 
