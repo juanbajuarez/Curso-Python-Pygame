@@ -22,6 +22,9 @@ def run_game()->None:
     #Inicia modulo pygame
     pygame.init()
 
+    #Se configura el reloj del juego
+    clock=pygame.time.Clock()
+
     #Se inicializa la pantalla
 
     screen=pygame.display.set_mode(Configurations.get_screen_size())
@@ -29,7 +32,8 @@ def run_game()->None:
     pygame.display.set_caption(Configurations.get_game_title())
 
     #se crea el bloque inicial de la serpiente(cabeza)
-    snake_head = SnakeBlock()
+    snake_head = SnakeBlock(is_head=True)
+    snake_head.snake_head_init()
 
     #Ciclo principal del juego
     game_over=False
@@ -37,7 +41,7 @@ def run_game()->None:
     while not game_over:
         game_over=game_event()
         #Se dibuja los elementos gráficos em la pantalla
-        screen_refresh(screen,snake_head)
+        screen_refresh(screen,clock,snake_head)
     #Se cierran los recursos del juego
     pygame.quit()
 
