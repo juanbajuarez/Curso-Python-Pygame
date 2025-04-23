@@ -1,6 +1,6 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
-# Descripción: Primera version pygame dfdfdughuuh
+# Descripción: Primera version pygame
 # versión 04
 # Se agregó la clase configuración en el módulo configurations.py que
 # va a iniciar
@@ -14,7 +14,8 @@ import pygame
 from  Configurations import Configurations
 from Game_funtionalities import game_event,screen_refresh
 from Snake import SnakeBlock
-# from pygame.sprite import  Group
+from pygame.sprite import  Group
+
 def run_game()->None:
     """
     Función principa
@@ -29,16 +30,16 @@ def run_game()->None:
     #Se inicializa la pantalla
 
     screen=pygame.display.set_mode(Configurations.get_screen_size())
-    #se configura el título del juego
+    #se configura el titulo del juego
     pygame.display.set_caption(Configurations.get_game_title())
 
     #se crea el bloque inicial de la serpiente(cabeza)
     snake_head = SnakeBlock(is_head=True)
     snake_head.snake_head_init()
 
-    #Se crea un grupo para almacenar el cuerpo de la serpiente
-    #snake_body=Group()
-    #snake_body.add(snake_head)
+    # Se crea un grupo para almacenar el cuerpo de la serpiente
+    snake_body = Group()
+    snake_body.add(snake_head)
 
     #Ciclo principal del juego
     game_over=False
@@ -46,7 +47,7 @@ def run_game()->None:
     while not game_over:
         game_over=game_event()
         #Se dibuja los elementos gráficos em la pantalla
-        screen_refresh(screen,clock,snake_head)
+        screen_refresh(screen,clock,snake_body)
     #Se cierran los recursos del juego
     pygame.quit()
 

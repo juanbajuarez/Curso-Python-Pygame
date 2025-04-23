@@ -1,23 +1,22 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
-# Descripción: Primera version pygame dfdfdughuuh
-# versión 04
+# Descripción: Primera version pygame
+# versión 05
 # Se agregó la clase configuración en el módulo configurations.py que
 # va a iniciar
 
-from turtle import Screen
-from typing import Tuple
 
-#Importar modulos para el video juego.
+#Importar modulos para el videojuego.
 
 import pygame
 from  Configurations import Configurations
-from Game_funtionalities import game_event,screen_refresh
+from Game_funtionalities import game_event,screen_refresh,snake_movement
 from Snake import SnakeBlock
-# from pygame.sprite import  Group
+from pygame.sprite import  Group
+
 def run_game()->None:
     """
-    Función principa
+    Función principal
     :return:
     """
     #Inicia modulo pygame
@@ -36,17 +35,20 @@ def run_game()->None:
     snake_head = SnakeBlock(is_head=True)
     snake_head.snake_head_init()
 
-    #Se crea un grupo para almacenar el cuerpo de la serpiente
-    #snake_body=Group()
-    #snake_body.add(snake_head)
+    # Se crea un grupo para almacenar el cuerpo de la serpiente
+    snake_body = Group()
+    snake_body.add(snake_head)
 
     #Ciclo principal del juego
     game_over=False
 
     while not game_over:
         game_over=game_event()
+
+        #funciom movimiento
+        snake_movement(snake_body)
         #Se dibuja los elementos gráficos em la pantalla
-        screen_refresh(screen,clock,snake_head)
+        screen_refresh(screen,clock,snake_body)
     #Se cierran los recursos del juego
     pygame.quit()
 
