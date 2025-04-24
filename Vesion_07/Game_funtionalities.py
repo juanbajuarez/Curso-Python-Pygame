@@ -61,7 +61,7 @@ def game_events(snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> b
                 snake_body.add(new_snake_block)
 
                 new_apple=Apple()
-                new_apple._random_position()
+                new_apple.random_position()
                 apples.add(new_apple)
 
 

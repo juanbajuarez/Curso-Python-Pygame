@@ -23,7 +23,7 @@ class Apple(Sprite):
         """
         screen.blit(self.image,self.rect)
 
-    def _random_position(self)->None:
+    def random_position(self)->None:
         """
         Se utiliza para inicializar la ubicación de la manzana
         """

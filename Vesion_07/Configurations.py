@@ -10,7 +10,7 @@ class Configurations:
     _screen_size = (1280, 720)            # Alto por ancho
     _game_title = "Snake game en Pygame"  #Título del juego
     _background = (255, 100, 50)          #Fondo de la pantalla en RGB
-    _fps = 5# Fps de juego
+    _fps = 12# Fps de juego
 
     #Configuraciones de la serpiente
     _snake_block_size=80 #tamaño de bloque de serpiente

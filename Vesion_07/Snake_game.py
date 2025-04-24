@@ -14,6 +14,7 @@ from Game_funtionalities import game_events, screen_refresh, snake_movement
 from Snake import SnakeBlock
 from pygame.sprite import Group
 from Apple import Apple
+from random import randint
 
 
 def run_game() -> None:
@@ -36,7 +37,7 @@ def run_game() -> None:
 
     #Se crea el bloque inicial de la manzana
     apple=Apple()
-    apple._random_position()
+    apple.random_position()
 
     #Se crea un bloque inicial de la manzana
     apples=Group()
