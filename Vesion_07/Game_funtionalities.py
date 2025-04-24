@@ -9,7 +9,7 @@ from Snake import SnakeBlock
 from Apple import Apple
 
 """CAMBIO. Ahora recibe el cuerpo de la serpiente para añadir el nuevo bloque al presionar la tecla 'espacio'."""
-def game_events(snake_body: pygame.sprite.Group) -> bool:
+def game_events(snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> bool:
     """
     Función que administra los eventos del juego.
     :param snake_body: Grupo con el cuerpo de la serpiente.
@@ -60,6 +60,11 @@ def game_events(snake_body: pygame.sprite.Group) -> bool:
                 new_snake_block = SnakeBlock()
                 snake_body.add(new_snake_block)
 
+                new_apple=Apple()
+                new_apple._random_position()
+                apples.add(new_apple)
+
+
     # Se regresa la bandera.
     return game_over
 
@@ -93,12 +98,13 @@ def snake_movement(snake_body: pygame.sprite.Group) -> None:
 
 
 def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
-                   snake_body: pygame.sprite.Group,apple:Apple) -> None:
+                   snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> None:
     """
     Función que administra los elementos de la pantalla.
     :param screen: Objeto con la pantalla.
     :param clock: Objeto con el reloj del videojuego.
     :param snake_body: Grupo con el cuerpo de la serpiente.
+    :param apples: Grupo de las manzanas
     """
     # Se dibujan los elementos en la pantalla.
     screen.fill(Configurations.get_background())    # Fondo de la pantalla en formato RGB.
@@ -111,8 +117,9 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
     # Es más eficiente, pero siempre dibuja en el orden en que fueron agregados al grupo.
     #snake_body.draw(screen)
 
-    #se dibuja la manzana
-    apple.blit(screen)
+    #Se dibujan las manzanas
+    apples.draw(screen)
+
 
     # Se actualiza la pantalla, dando la impresión de movimiento.
     pygame.display.flip()

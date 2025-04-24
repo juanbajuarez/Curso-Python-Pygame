@@ -10,12 +10,17 @@ class Configurations:
     _screen_size = (1280, 720)            # Alto por ancho
     _game_title = "Snake game en Pygame"  #Título del juego
     _background = (255, 100, 50)          #Fondo de la pantalla en RGB
-    _fps = 12# Fps de juego
+    _fps = 5# Fps de juego
 
     #Configuraciones de la serpiente
     _snake_block_size=80 #tamaño de bloque de serpiente
-    _snake_head_color=(40,20,255) #color de la cabeza de la serpiente
-    _snake_body_color=(10,255,30)
+    _snake_head_color=(0,255,0) #color de la cabeza de la serpiente
+    _snake_body_color=(0,0,255)
+
+    #COnfiguracionde la manzana
+    _apple_head_color = (255,0,0)
+    _apple_block_size = _snake_block_size
+
 
     #Métodos de acceso
 
@@ -62,4 +67,12 @@ class Configurations:
     @classmethod
     def get_snake_body_color(cls) -> tuple[int, int, int]:
         return cls._snake_head_color
+
+    @classmethod
+    def get_apple_head_color(cls)->tuple[int,int,int]:
+        return cls._apple_head_color
+
+    @classmethod
+    def get_apple_block_size(cls) -> int:
+        return cls._apple_block_size
 
