@@ -10,7 +10,7 @@
 
 import pygame
 from Configurations import Configurations
-from Game_funtionalities import game_events, screen_refresh, snake_movement
+from Game_funtionalities import game_events, screen_refresh, snake_movement,check_collitions
 from Snake import SnakeBlock
 from pygame.sprite import Group
 from Apple import Apple
@@ -52,6 +52,9 @@ def run_game() -> None:
 
         # Función que administra el movimiento de la serpiente.
         snake_movement(snake_body)
+
+        #Se revisan las colisiones en el juego
+        game_over=check_collitions(screen,snake_body,apples)
 
         # Función que administra los elementos de la pantalla.
         screen_refresh(screen, clock, snake_body,apples)
