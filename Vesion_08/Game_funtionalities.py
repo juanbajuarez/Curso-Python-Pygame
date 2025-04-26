@@ -2,6 +2,8 @@
 # Fecha: Marzo de 2025
 # Descripción: Primera version pygame
 # versión 06
+import time
+from idlelib.pyparse import trans
 
 import pygame
 from Configurations import Configurations
@@ -9,7 +11,7 @@ from Snake import SnakeBlock
 from Apple import Apple
 
 """CAMBIO. Ahora recibe el cuerpo de la serpiente para añadir el nuevo bloque al presionar la tecla 'espacio'."""
-def game_events(snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> bool:
+def game_events() -> bool:
     """
     Función que administra los eventos del juego.
     :param snake_body: Grupo con el cuerpo de la serpiente.
@@ -53,21 +55,6 @@ def game_events(snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> b
                 SnakeBlock.set_is_moving_left(False)
                 SnakeBlock.set_is_moving_up(False)
                 SnakeBlock.set_is_moving_down(True)
-
-            """NUEVO."""
-            # Se agrega un nuevo bloque al cuerpo de la serpiente.
-            if event.key == pygame.K_SPACE:
-                new_snake_block = SnakeBlock()
-                snake_body.add(new_snake_block)
-                #print(Apple.get_no_apples())
-
-                new_apple=Apple()
-                new_apple.random_position(snake_body)
-
-                #apples.remove(apples.sprites()[0])
-                apples.empty() #Remover todos lo elemetos del grupo
-                apples.add(new_apple)
-
 
     # Se regresa la bandera.
     return game_over
@@ -133,9 +120,21 @@ def check_collitions(screen: pygame.surface.Surface,
     if head.rect.left < screen_rect.left:
         game_over=True
 
+    #revisar las colisiones de la cabeza de la serpiente con el cuerpo de la serpiente
+    head_body_collision = pygame.sprite.spritecollide(head,snake_body,dokill=False)
+    if len(head_body_collision) > 1 :
+        game_over=True
 
-
-
+    #Se revisa la condición de la cabeza de la serpiente con la manzana
+    head_apples_collisions=pygame.sprite.spritecollide(head,apples,dokill=True)
+    if len(head_apples_collisions)>0:
+        new_snake_block=SnakeBlock()
+        new_snake_block.rect.x=snake_body.sprites()[-1].rect.x
+        new_snake_block.rect.y=snake_body.sprites()[-1].rect.y
+        snake_body.add(new_snake_block)
+        new_apple=Apple()
+        new_apple.random_position(snake_body)
+        apples.add(new_apple)
 
     return game_over
 
@@ -172,3 +171,9 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
 
     # Se controla la velocidad de fotogramas (FPS) del videojuego.
     clock.tick(Configurations.get_fps())
+
+def game_over_screen()->None:
+    """
+    Función con la parte del fin del juego
+    """
+    time.sleep(Configurations.get_game_over_screen_time())

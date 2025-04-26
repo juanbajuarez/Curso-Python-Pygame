@@ -10,7 +10,8 @@ class Configurations:
     _screen_size = (1280, 720)            # Alto por ancho
     _game_title = "Snake game en Pygame"  #Título del juego
     _background = (255, 100, 50)          #Fondo de la pantalla en RGB
-    _fps = 12# Fps de juego
+    _fps = 8# Fps de juego
+    _game_over_screen_time=1
 
     #Configuraciones de la serpiente
     _snake_block_size=80 #tamaño de bloque de serpiente
@@ -53,6 +54,14 @@ class Configurations:
 
         """
         return cls._fps       #Fps de juego
+
+
+    @classmethod
+    def get_game_over_screen_time(cls)->int:
+        """
+
+        """
+        return cls._game_over_screen_time       #Fps de juego
 
     @classmethod
     def get_snake_block_size(cls)->int:

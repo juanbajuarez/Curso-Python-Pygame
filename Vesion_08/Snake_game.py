@@ -10,11 +10,10 @@
 
 import pygame
 from Configurations import Configurations
-from Game_funtionalities import game_events, screen_refresh, snake_movement,check_collitions
+from Game_funtionalities import game_events, screen_refresh, snake_movement,check_collitions,game_over_screen
 from Snake import SnakeBlock
 from pygame.sprite import Group
 from Apple import Apple
-from random import randint
 
 
 def run_game() -> None:
@@ -48,13 +47,21 @@ def run_game() -> None:
     while not game_over:
         """CAMBIO. Ahora recibe el cuerpo de la serpiente para añadir el nuevo bloque al presionar 'espacio'."""
         # Función que administra los eventos del juego.
-        game_over = game_events(snake_body,apples)
+        game_over = game_events()
+
+        #Condicion de que cerro la ventana
+        if game_over:
+            break
 
         # Función que administra el movimiento de la serpiente.
         snake_movement(snake_body)
 
         #Se revisan las colisiones en el juego
         game_over=check_collitions(screen,snake_body,apples)
+
+        #si se ah perdio
+        if game_over:
+            game_over_screen()
 
         # Función que administra los elementos de la pantalla.
         screen_refresh(screen, clock, snake_body,apples)
