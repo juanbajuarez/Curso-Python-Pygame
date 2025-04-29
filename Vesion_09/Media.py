@@ -1,5 +1,6 @@
 import pygame
 from Configurations import Configurations
+
 class Background:
 
     """
