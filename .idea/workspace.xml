@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="369cf839-238d-45a2-8553-1cd53689bb4a" name="Changes" comment="Desde sc 02">
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Apple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Configurations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Game_funtionalities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Media.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Snake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_09/Snake_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_08/Game_funtionalities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_08/Game_funtionalities.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Curso-Python-Pygame\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;juanbajuarez&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/juanbajuarez/Curso-Python-Pygame.git&quot;,
+    &quot;accountId&quot;: &quot;737c9234-8919-43ca-9885-65258281e143&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2vPxq24Y1jh8BPXvgdSy3Dji1lw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Configurations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Game_funtionalities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/PycharmProjects/Curso-Python-Pygame&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\PycharmProjects\Curso-Python-Pygame" />
+      <recent name="C:\Users\Dell\PycharmProjects\Curso-Python-Pygame\Snake_game\Vesion_02" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\PycharmProjects\Curso-Python-Pygame\Snake_game" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Snake_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Curso-Python-Pygam" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vesion_09" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vesion_09/Snake_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Snake_game" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="369cf839-238d-45a2-8553-1cd53689bb4a" name="Changes" comment="" />
+      <created>1744060697784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744060697784</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1744171367803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744171367803</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1744171454660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744171454660</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1744253924107</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744253924107</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1744257466200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744257466200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1744344153529</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744344153529</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1745380761136</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745380761136</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1745467068940</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745467068940</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1745467511596</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745467511596</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1745553745956</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745553745956</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1745639836013</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745639836013</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Desde sc 02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Desde sc 02" />
+  </component>
+</project>
