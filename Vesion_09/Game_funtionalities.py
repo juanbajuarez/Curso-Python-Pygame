@@ -141,7 +141,7 @@ def check_collitions(screen: pygame.surface.Surface,
 
 
 def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
-                   snake_body: pygame.sprite.Group,apples:pygame.sprite.Group) -> None:
+                   snake_body: pygame.sprite.Group,apples:pygame.sprite.Group,background:Background) -> None:
     """
     Función que administra los elementos de la pantalla.
     :param screen: Objeto con la pantalla.
@@ -149,12 +149,11 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
     :param snake_body: Grupo con el cuerpo de la serpiente.
     :param apples: Grupo de las manzanas
     """
-    #Se dibija el fondo de la pantalla
-    background=Background
+    # Se dibuja el fondo de la pantalla
     background.blit(screen)
 
     # Se dibujan los elementos en la pantalla.
-    #screen.fill(Configurations.get_background())    # Fondo de la pantalla en formato RGB.
+    # screen.fill(Configurations.get_background())    # Fondo de la pantalla en formato RGB.
 
     #Se dibujan las manzanas
     apples.draw(screen)
