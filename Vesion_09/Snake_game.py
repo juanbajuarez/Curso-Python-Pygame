@@ -62,7 +62,7 @@ def run_game() -> None:
         #Se revisan las colisiones en el juego
         game_over=check_collitions(screen,snake_body,apples)
 
-        #si se ah perdio
+        #si se ah perdido
         if game_over:
             game_over_screen()
 
