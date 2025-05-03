@@ -9,24 +9,26 @@ class Configurations:
     #Configuraciones de la pantalla
     _screen_size = (1280, 720)            # Alto por ancho
     _game_title = "Snake game en Pygame"  #Título del juego
-   # _background = (255, 100, 50)          #Fondo de la pantalla en RGB
-    _fps = 8# Fps de juego
+    _fps = 12# Fps de juego
     _game_over_screen_time=1
+    _time_to_refresh=200
 
     #Configuraciones de la serpiente
     _snake_block_size=80 #tamaño de bloque de serpiente
-   # _snake_head_color=(0,255,0) #color de la cabeza de la serpiente
-   # _snake_body_color=(0,0,255)
 
-    #COnfiguracionde la manzana
-   # _apple_head_color = (255,0,0)
+    #Configuracionde la manzana
     _apple_block_size = _snake_block_size
 
     #ruta de los archivos multimedia
     _background_image_path = "../Media/background_image.jpg"
-    _apple_image_path="../Media/Apple3.png"
-    _snake_head_images_path="../Media/head2.png"
+    _apple_image_path=["../Media/Apple1.png","../Media/Apple2.png",
+                       "../Media/Apple3.png","../Media/Apple4.png"]
+    _snake_head_images_path=["../Media/head1.png","../Media/head2.png",
+                             "../Media/head3.png","../Media/head4.png",
+                             "../Media/head5.png","../Media/head6.png",
+                             "../Media/head7.png","../Media/head8.png"]
     _snake_body_images_path=["../Media/body1.png","../Media/body2.png","../Media/body3.png"]
+
     # Métodos de acceso
 
     @classmethod
@@ -44,13 +46,6 @@ class Configurations:
         """
         return cls._game_title
 
-   # @classmethod
-    #def get_background(cls) -> tuple[int,int,int]:
-    #    """
-    #    Getter para _background
-     #   :return:
-    #    """
-     #   return cls._background
 
     @classmethod
     def get_fps(cls)->int:
@@ -72,19 +67,6 @@ class Configurations:
 
         return cls._snake_block_size
 
-   # @classmethod
-   # def get_snake_head_color(cls)-> tuple[int,int,int]:
-
-    #    return cls._snake_head_color
-
-   # @classmethod
-   # def get_snake_body_color(cls) -> tuple[int, int, int]:
-    #    return cls._snake_head_color
-
-   # @classmethod
-   # def get_apple_head_color(cls)->tuple[int,int,int]:
-   #     return cls._apple_head_color
-
     @classmethod
     def get_apple_block_size(cls) -> int:
         return cls._apple_block_size
@@ -97,7 +79,7 @@ class Configurations:
         return cls._background_image_path
 
     @classmethod
-    def get_apple_image_path(cls) -> str:
+    def get_apple_image_path(cls) -> list:
         """
         get para obtener el fondo de pantalla
         """
@@ -105,7 +87,7 @@ class Configurations:
 
 
     @classmethod
-    def get_snake_head_image_path(cls) -> str:
+    def get_snake_head_image_path(cls) -> list:
         """
         get para obtener el fondo de pantalla
         """
@@ -117,4 +99,11 @@ class Configurations:
         get para obtener el fondo de pantalla
         """
         return cls._snake_body_images_path
+
+    @classmethod
+    def get_time_to_refresh(cls) -> int:
+        """
+        get para obtener el fondo de pantalla
+        """
+        return cls._time_to_refresh
 

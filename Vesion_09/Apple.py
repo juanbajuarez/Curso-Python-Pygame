@@ -13,12 +13,20 @@ class Apple(Sprite):
     def __init__(self):
         super().__init__()
         Apple._no_apples += 1
-        #self.image=pygame.Surface((Configurations.get_apple_block_size(),Configurations.get_apple_block_size()))
-        #self.image.fill(Configurations.get_apple_head_color())
-        self.image=pygame.image.load(Configurations.get_apple_image_path())
-        apple_block_size=Configurations.get_apple_block_size()
-        self.image=pygame.transform.scale(self.image,(apple_block_size,apple_block_size))
+        self._apple_frames=[]
+        apple_block_size = Configurations.get_apple_block_size()
 
+        for i in range(len(Configurations.get_apple_image_path())):
+            frame=pygame.image.load(Configurations.get_apple_image_path()[i])
+            frame=pygame.transform.scale(frame,(apple_block_size,apple_block_size))
+            self._apple_frames.append(frame)
+
+        self._last_update_time=pygame.time.get_ticks()
+
+        self._frame_index=0
+
+        self.image=self._apple_frames[self._frame_index]
+        self._frame_index=1
 
         self.rect=self.image.get_rect()
 
@@ -52,6 +60,27 @@ class Apple(Sprite):
                     break
                 else:
                     repeat=False
+
+    def animate_apple(self)->None:
+        """
+        SE utiliza para acualizar el frame visible de la manzanda,
+        dando la impresion de movimiento.
+
+        """
+        current_time=pygame.time.get_ticks()
+        time_to_refresh=Configurations.get_time_to_refresh()
+
+        needs_refresh = (current_time-self._last_update_time)>=time_to_refresh
+
+        if needs_refresh:
+            self.image=self._apple_frames[self._frame_index]
+
+            self._last_update_time=current_time
+            self._frame_index+=1
+
+            if self._frame_index >= len(self._apple_frames):
+                self._frame_index=0
+
     @classmethod
     def get_no_apples(cls)->int:
          """

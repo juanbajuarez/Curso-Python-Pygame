@@ -13,7 +13,7 @@ from Media import Background
 def game_events() -> bool:
     """
     Función que administra los eventos del juego.
-    :param snake_body: Grupo con el cuerpo de la serpiente.
+    :param Snake_body: Grupo con el cuerpo de la serpiente.
     :return: La bandera de fin del juego.
     """
     # Se declara la bandera de fin del juego que se retorna.
@@ -86,17 +86,17 @@ def snake_movement(snake_body: pygame.sprite.Group) -> None:
     elif SnakeBlock.get_is_moving_down():
         head.rect.y += Configurations.get_snake_block_size()
 
-#Funcio para coliciones
+#Funcion para colisiones
 def check_collitions(screen: pygame.surface.Surface,
                      snake_body: pygame.sprite.Group,
                      apples:pygame.sprite.Group)->bool:
     """
-    Funcion que revisa las colisiones del juego:
+    Función que revisa las colisiones del juego:
     *Cabeza de la serpiente con el cuerpo
     *Cabeza de la serpiente con el bode de la pantalla
     *Cabeza de la serpiente con la manzana
-    param: scrren pantalla
-    param: snake_body: cuerpo de la sepiente
+    param: screen pantalla
+    param: snake_body: cuerpo de la serpiente
     param:apples: grupo con las manzanas
     return: la bandera del fin del juego
     """
@@ -152,8 +152,8 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
     # Se dibuja el fondo de la pantalla
     background.blit(screen)
 
-    # Se dibujan los elementos en la pantalla.
-    # screen.fill(Configurations.get_background())    # Fondo de la pantalla en formato RGB.
+    #Se animan las manzanas
+    apples.sprites()[0].animate_apple()
 
     #Se dibujan las manzanas
     apples.draw(screen)
@@ -161,12 +161,6 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
     # Se dibuja la serpiente, dibujando primero el último bloque y al último la cabeza de la serpiente.
     for snake_block in reversed(snake_body.sprites()):
         snake_block.blit(screen)
-
-    """NOTA. Probar con lo siguiente en lugar del ciclo for anterior."""
-    # Es más eficiente, pero siempre dibuja en el orden en que fueron agregados al grupo.
-    #snake_body.draw(screen)
-
-
 
     # Se actualiza la pantalla, dando la impresión de movimiento.
     pygame.display.flip()

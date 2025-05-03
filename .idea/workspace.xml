@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="369cf839-238d-45a2-8553-1cd53689bb4a" name="Changes" comment="Desde sc 02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/archivo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Vesion_09/Apple.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Apple.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vesion_09/Configurations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Configurations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_09/Game_funtionalities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Game_funtionalities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vesion_09/Media.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Media.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vesion_09/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Snake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vesion_09/Snake_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_09/Snake_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +51,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Configurations.executor": "Run",
-    "Python.Game_funtionalities.executor": "Run",
-    "Python.Snake.executor": "Run",
-    "Python.Snake_game (1).executor": "Run",
-    "Python.Snake_game (2).executor": "Run",
-    "Python.Snake_game.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Dell/PycharmProjects/Curso-Python-Pygame",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Configurations.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Game_funtionalities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Snake_game.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/PycharmProjects/Curso-Python-Pygame&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\PycharmProjects\Curso-Python-Pygame" />
@@ -224,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745899502099</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1746072092170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746072092170</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
