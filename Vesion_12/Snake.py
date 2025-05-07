@@ -19,7 +19,7 @@ class SnakeBlock(Sprite):
         # Se llama al constructor de la clase padre.
         super().__init__()
 
-        """CAMBIO. Ahora se cargan todos los frames de la cabeza en una lista. """
+
         # Si es la cabeza de la serpiente, se almacenan todos los frames que dan la impresión de movimiento.
         if is_head:
             # Lista que almacena los frames de la cabeza de la serpiente.

@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369cf839-238d-45a2-8553-1cd53689bb4a" name="Changes" comment="Desde sc 02">
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Apple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Configurations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Game_funtionalities.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Media.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Snake.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vesion_11/Snake_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vesion_10/Media.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_10/Media.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Apple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Configurations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Game_funtionalities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Media.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Snake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Vesion_12/Snake_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_11/Configurations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_11/Configurations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_11/Game_funtionalities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_11/Game_funtionalities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_11/Media.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_11/Media.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_11/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_11/Snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vesion_11/Snake_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vesion_11/Snake_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +90,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vesion_09" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vesion_12" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vesion_09/Snake_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vesion_12/Snake_game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746503526999</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Desde sc 02">
+      <option name="closed" value="true" />
+      <created>1746503696720</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746503696720</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -4,10 +4,13 @@
 # versión 06
 import time
 import pygame
+from pygame.examples.scrap_clipboard import screen
+
 from Configurations import Configurations
 from Snake import SnakeBlock
 from Apple import Apple
-from Media import Background,Audio
+from Media import Background,Audio,Scoreboard
+from Vesion_12.Media import GameOverImage
 
 """CAMBIO. Ahora recibe el cuerpo de la serpiente para añadir el nuevo bloque al presionar la tecla 'espacio'."""
 def game_events() -> bool:
@@ -89,7 +92,7 @@ def snake_movement(snake_body: pygame.sprite.Group) -> None:
 #Funcion para colisiones
 def check_collitions(screen: pygame.surface.Surface,
                      snake_body: pygame.sprite.Group,
-                     apples:pygame.sprite.Group,audio:Audio)->bool:
+                     apples:pygame.sprite.Group,audio:Audio,scoreboard:Scoreboard)->bool:
     """
     Función que revisa las colisiones del juego:
     *Cabeza de la serpiente con el cuerpo
@@ -134,8 +137,11 @@ def check_collitions(screen: pygame.surface.Surface,
         new_apple=Apple()
         new_apple.random_position(snake_body)
         apples.add(new_apple)
+
         # Se reproduce el sonido de que la serpiente ha comido la manzana.
         audio.play_eats_apple_sound()
+
+    scoreboard.update(Apple.get_no_apples()-1)
 
     return game_over
 
@@ -143,7 +149,8 @@ def check_collitions(screen: pygame.surface.Surface,
 
 
 def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
-                   snake_body: pygame.sprite.Group,apples:pygame.sprite.Group,background:Background) -> None:
+                   snake_body: pygame.sprite.Group,apples:pygame.sprite.Group,
+                   background:Background,scoreboard:Scoreboard) -> None:
     """
     Función que administra los elementos de la pantalla.
     :param screen: Objeto con la pantalla.
@@ -151,6 +158,10 @@ def screen_refresh(screen: pygame.surface.Surface, clock: pygame.time.Clock,
     :param snake_body: Grupo con el cuerpo de la serpiente.
     :param apples: Grupo de las manzanas
     """
+
+    #Se dibuja el fondo de Score
+    scoreboard.blit(screen)
+
     # Se dibuja el fondo de la pantalla
     background.blit(screen)
 
@@ -178,3 +189,7 @@ def game_over_screen(audio:Audio)->None:
     audio.music_fadeout(time=Configurations.get_music_fadeout_time())
     audio.play_game_over_sound()
     time.sleep(Configurations.get_game_over_screen_time())
+
+    game_over_image=GameOverImage()
+    game_over_image.blit(screen)
+    pygame.display.flip()

@@ -1,7 +1,7 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
 # Descripción: Primera version pygame
-# versión 06
+# versión 1.2
 # Se agregó la clase configuración en el módulo configurations.py que
 # va a iniciar
 
@@ -13,7 +13,7 @@ from Game_funtionalities import game_events, screen_refresh, snake_movement,chec
 from Snake import SnakeBlock
 from pygame.sprite import Group
 from Apple import Apple
-from  Media import Background,Audio
+from  Media import Background,Audio,Scoreboard
 
 
 def run_game() -> None:
@@ -43,10 +43,15 @@ def run_game() -> None:
     apples.add(apple)
 
     background=Background()
+
     # Se crea el objeto con el sonido del juego y se reproduce la música y el sonido inicial del juego.
     audio = Audio()
     audio.play_music(volume=Configurations.get_music_volume())
     audio.play_star_sound()
+
+    #Se crea el objeto con el score del juego
+
+    scoreboard=Scoreboard()
 
     # Ciclo principal del videojuego.
     game_over = False
@@ -69,7 +74,7 @@ def run_game() -> None:
             game_over_screen(audio)
 
         # Función que administra los elementos de la pantalla.
-        screen_refresh(screen, clock, snake_body,apples,background)
+        screen_refresh(screen, clock, snake_body,apples,background,scoreboard)
 
     # Cierra todos los recursos del módulo pygame.
     pygame.quit()

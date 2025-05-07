@@ -27,7 +27,7 @@ class Configurations:
                                "../media/head4.png", "../media/head5.png", "../media/head6.png",
                                "../media/head7.png", "../media/head8.png"]
     _snake_body_images_path = ["../media/body1.png", "../media/body2.png", "../media/body3.png"]
-    _apple_frames_path = ["../media/Apple1.png", "../media/Apple2.png", "../media/Apple3.png", "../media/Apple4.png"]
+    _apple_image_path = ["../media/Apple1.png", "../media/Apple2.png", "../media/Apple3.png", "../media/Apple4.png"]
 
     """NUEVO."""
     # Configuraciones de la música del juego.
@@ -120,11 +120,11 @@ class Configurations:
         return cls._snake_body_images_path
 
     @classmethod
-    def get_apple_frames_path(cls) -> list:
+    def get_apple_image_path(cls) -> list:
         """
         Getter para _apple_frames_path.
         """
-        return cls._apple_frames_path
+        return cls._apple_image_path
 
     """NUEVO. Se agregaron los métodos de acceso."""
     @classmethod
