@@ -1,7 +1,7 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
 # Descripción: Primera version pygame
-# versión 1.2
+# versión 1.2 Final
 # Se agregó la clase configuración en el módulo configurations.py que
 # va a iniciar
 
